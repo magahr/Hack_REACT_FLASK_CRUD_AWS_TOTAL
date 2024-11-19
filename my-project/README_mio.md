@@ -6,13 +6,16 @@
           
           Repo:
           C:\Users\mhernandez.FOSPUCA\Documents\cursos\Ciclo08\Practica\hack\React\Hack_REACT_FLASK_CRUD_AWS_TOTAL\my-project
-
+     Rutas en casa:
+          Repo:
+          C:\Users\Magahr\Documents\cursos\socialOplesk\socialOplesk\Ciclo08\Practicas\hacks\Hack_REACT_CRUD\Hack_REACT_FLASK_CRUD_AWS_TOTAL
+         
 
 # Paso 1.- Clone el repo
-    git clone  https://github.com/magahr/Hack_REACT_FLASK_CRUD_AWS.git
+    git clone  https://github.com/magahr/Hack_REACT_FLASK_CRUD_AWS_TOTAL.git
 
 # Paso 2.-Entre en le directorio de repo 
-   cd Hack_REACT_FLASK_CRUD
+   cd my-project
 
 # Paso 3: crear el virtual en el backend
     Con Bach:
@@ -139,5 +142,23 @@
 Control de cambio
 
 1.- git commit -m "18-11-2024 - Starting my project"
+1.- git commit -m "18-11-2024 - Updating my project"
 
 
+asi estaba:
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+   "start": "concurrently \"source .venv/bin/activate && flask run\" \"npm start --prefix frontend\"",
+            "frontend": "cd frontend && npm start",
+            "backend": "source .venv/bin/activate && flask run",
+            "setup": "python -m venv .venv && source .venv/bin/activate && pip install -r requeriments.txt"
+  }, 
+
+este es el nuevo:
+"scripts": {
+      "dev": "npm run setup && npm start",
+      "frontend": "cd frontend && npm start",
+      "backend": "source .venv/bin/activate && flask run",
+      "setup": "python -m venv .venv && source .venv/bin/activate && pip install -r requeriments.txt"
+},

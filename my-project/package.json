@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"cd backend && source .venv/Scripts/activate && flask --app hello run\" \"cd frontend/my-app && npm start\""
-
-  },                  
-
-
+      "dev": "npm run setup && npm start",
+      "frontend": "cd frontend && npm start",
+      "backend": "cd backend/.venv && .venv/bin/activate && flask --app hello run",
+      "setup": "cd backend && python -m venv .venv && cd backend && source .venv/Scripts/activate && cd backend && pip install -r requeriments.txt"
+},
+   
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": ""
 }
+
