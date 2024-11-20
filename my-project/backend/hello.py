@@ -22,8 +22,6 @@ db_url = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
 app.config['SQLALCHEMY_DATABASE_URI'] = db_url
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
-# dhasta aqui habia una conexion con una base de datos postgress local
-
 
 # Creación del modelo de Formulario (modelo - tabla de la base de datos)
 #id, nombre, email, edad
@@ -55,7 +53,7 @@ with app.app_context():
 
 @app.route("/")
 def hello_world():
-    return "<p>(hello_AWS) -    Hello, Big World from Hack_REACT_FLASK_CRUD_AWS!</p>"
+    return "<p>Bienvenido al Backend en Flask - Proyecto Actualización de Usuarios</p>"
 
 
 # POST -> Se utiliza para enviar datos al servidor para su procesamiento

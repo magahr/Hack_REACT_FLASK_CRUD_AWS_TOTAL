@@ -2,16 +2,20 @@
   "name": "my-project",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-      "dev": "npm run setup && npm start",
-      "frontend": "cd frontend && npm start",
-      "backend": "cd backend/.venv && .venv/bin/activate && flask --app hello run",
-      "setup": "cd backend && python -m venv .venv && cd backend && source .venv/Scripts/activate && cd backend && pip install -r requeriments.txt"
+ 
+ "scripts": {
+  "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+  "backend": "cd backend && echo 'Creating virtual environment...' && python -m venv .venv && echo 'Activating virtual environment...' && .\\.venv\\Scripts\\activate && echo 'Installing dependencies...' && pip install -r requirements.txt && npm start",
+  "frontend": "cd frontend/my-app && npm start",
+  "setup": "cd backend && echo 'Creating virtual environment...' && if not exist .venv python -m venv .venv && echo 'Activating virtual environment...' && (if [[ $OSTYPE == 'win32' ]]; then .\\.venv\\Scripts\\activate; else source .venv/bin/activate; fi) && echo 'Installing dependencies...' && pip install -r requirements.txt"
 },
-   
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
 }
 
+ 
