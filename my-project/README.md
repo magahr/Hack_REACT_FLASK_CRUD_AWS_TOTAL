@@ -22,7 +22,7 @@
      Si existe la carpeta .venv ELIMINARLA 
 
 
-# Paso 3.- Cre la variable de entorno .env
+# Paso 3.- Cree la variable de entorno .env
      cd my-project\backend
      .env
       DB_USER=postgres
@@ -30,6 +30,14 @@
       DB_HOST=formulariosrds.chwqcma4ef8n.us-east-2.rds.amazonaws.com
       DB_PORT=5432
       DB_NAME=formularios
+
+# Paso 4.- Entre a la carpeta 
+
+      cd Hack_REACT_FLASK_CRUD_AWS_TOTAL\my-project
+
+# Paso 5.- Ejecute el proyecto
+
+       npm run dev
   
 Control de cambio
 
