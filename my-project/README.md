@@ -21,6 +21,12 @@
      cd my-project\backend
      Si existe la carpeta .venv ELIMINARLA 
 
+# Paso 3.- Actualizar concurrently
+
+     rm -rf node_modules
+     npm install
+  
+     npm install concurrently
 
 # Paso 3.- Cree la variable de entorno .env
      cd my-project\backend
