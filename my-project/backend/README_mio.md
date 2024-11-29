@@ -70,10 +70,10 @@
 
 # Paso 11: instalar o crear uno nuevo las dependencias necesarias las cuales dejare en un archivo requirements.txt
     Si ya esta creado, para actualizar una ves que ya se ha bajado el repo:
-       # pip install -r requeriments.txt
+       # pip install -r requirements.txt
 
     Si no está creado, o se quiere actualizar:
-       # pip freeze > requeriments.txt
+       # pip freeze > requirements.txt
 
 # Paso 12: Crear una nueva rama para trabajar desde alli
      git checkout -b feature/flask-con-base-de-datos
