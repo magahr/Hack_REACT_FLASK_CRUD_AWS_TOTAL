@@ -42,7 +42,14 @@
    DB_HOST=formulariosrds.chwqcma4ef8n.us-east-2.rds.amazonaws.com
    DB_PORT=5432
    DB_NAME=formularios
-    
+
+  DB_USER=postgres
+  DB_PASSWORD=postgres
+  DB_HOST=formularios02rds.chwqcma4ef8n.us-east-2.rds.amazonaws.com
+  DB_PORT=5432
+  DB_NAME=formularios
+
+      
 # Paso 6.- Salir de Visual CODE
 
 # Paso 7.- Entrar a la carpeta del repo
@@ -90,9 +97,26 @@
           password postgres
        \l (lista la BD)
     -Crear la BASE DE DATOS
-       CREATE DATABASE estudiantes_grupo_8;
+       
+-- Table: public.formulario
 
- 
+-- DROP TABLE IF EXISTS public.formulario;
+
+CREATE TABLE IF NOT EXISTS public.formulario
+(
+    id integer NOT NULL DEFAULT nextval('formulario_id_seq'::regclass),
+    nombre character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    edad integer NOT NULL,
+    email character varying(50) COLLATE pg_catalog."default",
+    CONSTRAINT formulario_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.formulario
+    OWNER to postgres;
+  
+
 
 # Paso 15: Configuración de la Base de Datos
    - Importar los modulos correspondientes
@@ -141,7 +165,7 @@
 Control de cambio
 
 1.- git commit -m "16-11-2024 - Starting with aws"
-1.- git commit -m "16-11-2024 - Changing everythin with conecting with aws"
-2.- git commit -m "17-11-2024 - Conecting with AWS and testing the API"
-3.- git commit -m "18-11-2024 - Updating in my Job"
-
+2.- git commit -m "16-11-2024 - Changing everythin with conecting with aws"
+3.- git commit -m "17-11-2024 - Conecting with AWS and testing the API"
+4.- git commit -m "18-11-2024 - Updating in my Job"
+5.- git commit -m "01-12-2024 - Updating the new server"
