@@ -109,14 +109,23 @@ CREATE TABLE IF NOT EXISTS public.formulario
     edad integer NOT NULL,
     email character varying(50) COLLATE pg_catalog."default",
     CONSTRAINT formulario_pkey PRIMARY KEY (id)
+   
 )
 
 TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public.formulario
     OWNER to postgres;
-  
 
+OTRA FORMA:
+
+CREATE TABLE formulario
+(
+    id serial PRIMARY KEY,
+    nombre VARCHAR (50) UNIQUE NOT NULL,
+    edad integer NOT NULL,
+    email VARCHAR (50) NOT NULL
+)
 
 # Paso 15: Configuración de la Base de Datos
    - Importar los modulos correspondientes
@@ -169,3 +178,4 @@ Control de cambio
 3.- git commit -m "17-11-2024 - Conecting with AWS and testing the API"
 4.- git commit -m "18-11-2024 - Updating in my Job"
 5.- git commit -m "01-12-2024 - Updating the new server"
+6.- git commit -m "12-12-2024 - Updating the new server"
